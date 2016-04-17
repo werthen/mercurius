@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  semester: MyString
+  lecturer_id: 
+  studyhours: 1
+  credits: 1
+  code: MyString
+
+two:
+  name: MyString
+  semester: MyString
+  lecturer_id: 
+  studyhours: 1
+  credits: 1
+  code: MyString
