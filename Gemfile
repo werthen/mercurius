@@ -27,6 +27,8 @@ gem 'mechanize'
 
 gem 'pure-css-rails'
 
+gem 'textacular'
+
 gem 'coveralls', require: false
 
 # Use ActiveModel has_secure_password
@@ -49,4 +51,6 @@ group :development, :test do
   gem 'spring'
 
   gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rails'
 end
