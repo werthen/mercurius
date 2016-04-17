@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :courses, only: [:index, :show]
+
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
