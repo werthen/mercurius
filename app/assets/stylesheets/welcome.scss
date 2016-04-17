@@ -75,7 +75,6 @@ html {
     top: -50px;
     width: 90%;
     height: 50%;
-    resize: both;
     text-align: center;
     button,
     input {
@@ -88,6 +87,7 @@ html {
         border-style: solid;
         border-color: $ugent_blue;
         border-radius: 0;
+        resize: none;
     }
 
     #search-button {
