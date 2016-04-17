@@ -1,6 +1,6 @@
 module WelcomeHelper
   def thing
-    %w(🦄 🌮 🐧 🐳 🐕).sample
+    %w(🦄 🐧 🐳 🐕 🐈 🐩).sample
   end
 
   def love
