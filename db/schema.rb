@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417155440) do
+ActiveRecord::Schema.define(version: 20160417224650) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+  enable_extension "pg_trgm"
 
   create_table "courses", force: :cascade do |t|
     t.string   "name"
@@ -24,15 +28,15 @@ ActiveRecord::Schema.define(version: 20160417155440) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "courses", ["lecturer_id"], name: "index_courses_on_lecturer_id"
+  add_index "courses", ["lecturer_id"], name: "index_courses_on_lecturer_id", using: :btree
 
   create_table "courses_programmes", id: false, force: :cascade do |t|
     t.integer "course_id"
     t.integer "programme_id"
   end
 
-  add_index "courses_programmes", ["course_id"], name: "index_courses_programmes_on_course_id"
-  add_index "courses_programmes", ["programme_id"], name: "index_courses_programmes_on_programme_id"
+  add_index "courses_programmes", ["course_id"], name: "index_courses_programmes_on_course_id", using: :btree
+  add_index "courses_programmes", ["programme_id"], name: "index_courses_programmes_on_programme_id", using: :btree
 
   create_table "faculties", force: :cascade do |t|
     t.string   "name"
@@ -56,6 +60,8 @@ ActiveRecord::Schema.define(version: 20160417155440) do
     t.string   "code"
   end
 
-  add_index "programmes", ["faculty_id"], name: "index_programmes_on_faculty_id"
+  add_index "programmes", ["faculty_id"], name: "index_programmes_on_faculty_id", using: :btree
 
+  add_foreign_key "courses", "lecturers"
+  add_foreign_key "programmes", "faculties"
 end
