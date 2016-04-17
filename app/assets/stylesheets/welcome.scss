@@ -1,0 +1,108 @@
+/* Place all the styles related to the Welcome controller here.*/
+/* They will automatically be included in application.css.*/
+/* You can use Sass (SCSS) here: http://sass-lang.com/*/
+$ugent_blue: #0f61de;
+$ugent_yellow: #ffbf0f;
+.viewport,
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    font-family: 'Raleway', sans-serif;
+}
+.one-page {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    resize: both;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+.banner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+    margin: 0;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0;
+    resize: both;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f61de+32,ffbf0f+65 */
+    background: $ugent_blue;
+    /* Old browsers */
+    background: -moz-linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '$ugent_blue', endColorstr='$ugent_yellow',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+}
+.blank {
+    height: 25%;
+}
+.title {
+    font-size: 75px;
+    width: 100%;
+    position: relative;
+    top: calc(50% - 37.5px);
+    /* left: 200px; */
+    text-align: center;
+    color: white;
+    font-weight: 100;
+}
+
+.main {
+    top: -50px;
+    width: 90%;
+    height: 50%;
+    resize: both;
+    text-align: center;
+    button,
+    input {
+        height: 100px;
+        width: 100%;
+    }
+
+    #search {
+        border: 3px;
+        border-style: solid;
+        border-color: $ugent_blue;
+        border-radius: 0;
+    }
+
+    #search-button {
+        background-color: $ugent_blue;
+        border-radius: 0;
+    }
+}
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.pure-g > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
