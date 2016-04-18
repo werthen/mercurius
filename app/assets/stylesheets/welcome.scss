@@ -16,10 +16,10 @@ html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
     width: 100%;
     height: 100%;
     resize: both;
+    flex-direction: column;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     -webkit-justify-content: center;
@@ -56,6 +56,22 @@ html {
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '$ugent_blue', endColorstr='$ugent_yellow',GradientType=1 );
     /* IE6-9 fallback on horizontal gradient */
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
 }
 .blank {
     height: 25%;
@@ -64,7 +80,7 @@ html {
     font-size: 75px;
     width: 100%;
     position: relative;
-    top: calc(50% - 37.5px);
+    /* top: calc(50% - 37.5px); */
     /* left: 200px; */
     text-align: center;
     color: white;
