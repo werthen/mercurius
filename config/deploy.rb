@@ -42,8 +42,10 @@ set :ssh_options, forward_agent: true
 # set :keep_releases, 5
 
 namespace :deploy do
-  task :restart, roles: :web do
-    run "touch #{current_path}/tmp/restart.txt"
+  task :restart do
+    on primary roles :web do
+      run "touch #{current_path}/tmp/restart.txt"
+    end
   end
 end
 
