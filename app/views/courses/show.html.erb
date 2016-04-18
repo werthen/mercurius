@@ -1,5 +1,7 @@
 <h1><%= @course.name %></h1>
 
+<%= link_to 'ECTS Fiche', @course.ects_url %>
+
 <ul>
     <% @course.programmes.each do |programme| %>
     <li><%= programme.name %>
