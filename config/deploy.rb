@@ -41,12 +41,26 @@ set :ssh_options, forward_agent: true
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-namespace :deploy do
+#namespace :deploy do
+#  task :restart do
+#    on primary roles :web do
+#      run "touch #{current_path}/tmp/restart.txt"
+#    end
+#  end
+#end
+#
+#after :deploy, 'deploy:restart'
+
+namespace :passenger do
+  desc "Restart Application"
   task :restart do
-    on primary roles :web do
-      run "touch #{current_path}/tmp/restart.txt"
+    on roles(:app) do
+      with rails_env: fetch(:rails_env) do
+        execute "touch #{current_path}/tmp/restart.txt"
+      end
     end
+    invoke 'delayed_job:restart'
   end
 end
 
-after 'deploy:publishing', 'deploy:restart'
+after :deploy, "passenger:restart"
