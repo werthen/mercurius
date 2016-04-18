@@ -4,7 +4,7 @@
 
 <ul>
     <% @course.programmes.each do |programme| %>
-    <li><%= programme.name %>
+    <li><%= link_to programme.name, programme %>
         <%= link_to "Op studiegids", programme.url %></li>
     <% end %>
 </ul>
