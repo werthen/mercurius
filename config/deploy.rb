@@ -42,7 +42,7 @@ set :ssh_options, forward_agent: true
 # set :keep_releases, 5
 
 namespace :passenger do
-  desc "Restart Application"
+  desc 'Restart Application'
   task :restart do
     on roles(:app) do
       with rails_env: fetch(:rails_env) do
@@ -52,4 +52,13 @@ namespace :passenger do
   end
 end
 
-after :deploy, "passenger:restart"
+namespace :scraper do
+  desc 'Rake scraper:scrape'
+  task :scrape do
+    on roles(:app) do
+      execute "cd #{current_path} && /usr/local/rvm/bin/rvm default do bundle exec rake scraper:scrape RAILS_ENV=#{fetch(:rails_env)}"
+    end
+  end
+end
+
+after :deploy, 'passenger:restart'

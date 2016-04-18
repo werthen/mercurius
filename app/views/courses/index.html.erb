@@ -5,4 +5,8 @@
         <%= link_to course.name, course %>
     </li>
     <% end %>
+    <% (@page..@page + 5).each do |i| %>
+    <%= link_to i, courses_path(page: i), class: 'pure-button' %>
+    <% end %>
+    <%= @courses.out_of_bounds? %>
 </ul>
