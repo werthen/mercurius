@@ -57,6 +57,7 @@ namespace :scraper do
         programmas.links.each do |proglink|
           programmacode = proglink.attributes['href'].split('/')[-2]
           prog = proglink.click
+          prog_url = prog.uri.to_s
 
           opleidingsnaam = prog.search('.opleidingsnaam').text
 
@@ -64,6 +65,7 @@ namespace :scraper do
           programme.name = opleidingsnaam
           programme.code = programmacode
           programme.faculty = faculty
+          programme.url = prog_url
           programme.save
 
           puts "\t#{programme.name} - #{programme.code}"

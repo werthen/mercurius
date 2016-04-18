@@ -74,7 +74,7 @@ html {
     -ms-flex-direction: column;
 }
 .blank {
-    height: 25%;
+    height: 10%;
 }
 .title {
     font-size: 75px;
@@ -86,29 +86,25 @@ html {
     color: white;
     font-weight: 100;
 }
-
 .main {
     top: -50px;
     width: 90%;
-    height: 50%;
+    height: 65%;
     text-align: center;
     button,
     input {
         height: 100px;
         width: 100%;
     }
-
     #search {
         border: 3px;
         border-style: solid;
         border-color: $ugent_blue;
         border-radius: 0;
         resize: none;
-
         font-size: 40px;
         font-weight: 100;
     }
-
     #search-button {
         background-color: $ugent_blue;
         border-radius: 0;
@@ -117,8 +113,7 @@ html {
     }
 }
 footer {
-    position: fixed;
-    bottom: 10px;
+    margin-bottom: 10px;
     width: 100%;
     text-align: center;
     font-weight: 100;
@@ -127,4 +122,22 @@ footer {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+#icon-links {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    .icon-link {
+        flex-grow: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .link-description {
+            text-align: center;
+            letter-spacing: normal;
+            font-weight: bold;
+        }
+    }
+    position: relative;
+    width: 100%;
 }

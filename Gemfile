@@ -29,7 +29,10 @@ gem 'pure-css-rails'
 gem 'textacular'
 
 gem 'coveralls', require: false
-gem 'whenever', :require => false
+gem 'whenever', require: false
+gem 'font-awesome-rails'
+
+gem 'valid_url'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

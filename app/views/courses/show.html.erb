@@ -1,3 +1,10 @@
 <h1><%= @course.name %></h1>
 
+<ul>
+    <% @course.programmes.each do |programme| %>
+    <li><%= programme.name %>
+        <%= link_to "Op studiegids", programme.url %></li>
+    <% end %>
+</ul>
+
 <%= link_to "Back", :back %>
