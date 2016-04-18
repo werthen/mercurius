@@ -82,7 +82,7 @@ namespace :scraper do
               studiefiche = row.search('td.cursus a').first.attributes['href']
               if studiefiche
                 code = studiefiche.value.split('/').last.split('.').first
-                data['studiefiche'] = "studiegids.ugent.be#{studiefiche.value}"
+                data['studiefiche'] = "http://studiegids.ugent.be#{studiefiche.value}"
               end
 
               # Get lecturer data from site
@@ -95,6 +95,7 @@ namespace :scraper do
                 lecturer = Lecturer.find_by(code: lesgever_code) || Lecturer.new
                 lecturer.name = data['lesgever']
                 lecturer.code = lesgever_code
+                lecturer.url = lesgever_url
                 lecturer.save
               end
 
@@ -112,6 +113,7 @@ namespace :scraper do
               course.code = code if code
               course.lecturer = lecturer if lecturer
               course.programmes << programme unless course.programmes.include?(programme)
+              course.ects_url = data['studiefiche']
               course.save
 
               puts "\t\t#{course.name}"
