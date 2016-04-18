@@ -9,6 +9,21 @@
         <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     </head>
     <body>
+        <div class="nav">
+            <%= link_to '☿', :root, class:" pure-menu-link nav-brand" %>
+            <div class="nav-list-item">
+                <%= link_to 'Courses', :courses, class: 'pure-menu-link' %>
+            </div>
+            <div class="nav-list-item">
+                <%= link_to 'Programmes', :programmes, class: 'pure-menu-link' %>
+            </div>
+            <div class="nav-list-item">
+                <%= link_to 'Faculties', :faculties, class: 'pure-menu-link' %>
+            </div>
+            <div class="nav-list-item">
+                <%= link_to 'Lecturers', :lecturers, class: 'pure-menu-link' %>
+            </div>
+        </div>
 
         <%= yield %>
 

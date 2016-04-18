@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
   resources :courses, only: [:index, :show]
+  resources :lecturers, only: [:index, :show]
+  resources :faculties, only: [:index, :show]
+  resources :programmes, only: [:index, :show]
 
   root 'welcome#index'
 

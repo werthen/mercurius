@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+
+    flex-wrap: wrap;
+    .nav-list-item {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+
+        height: 100%;
+    }
+}
