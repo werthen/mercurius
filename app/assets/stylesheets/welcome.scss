@@ -3,12 +3,21 @@
 /* You can use Sass (SCSS) here: http://sass-lang.com/*/
 $ugent_blue: #0f61de;
 $ugent_yellow: #ffbf0f;
-.viewport,
 body,
 html {
     width: 100%;
     height: 100%;
     background-color: #fafafa;
+}
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"],
+.viewport,
+button,
+html,
+input,
+select,
+textarea {
+    /* Set your content font stack here: */
     font-family: 'Raleway', sans-serif;
 }
 .one-page {
@@ -131,7 +140,6 @@ footer {
         flex-grow: 1;
         margin-left: 20px;
         margin-right: 20px;
-
         .link-description {
             text-align: center;
             letter-spacing: normal;

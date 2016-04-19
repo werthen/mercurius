@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
   def index
     @courses = if params[:search]
+                 @search = params[:search]
                  Course.fuzzy_search(name: params[:search])
                else
                  Course.all

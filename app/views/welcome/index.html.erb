@@ -4,7 +4,7 @@
     </div>
     <div class="blank"></div>
     <div class="main">
-        <%= form_tag(courses_path, method: 'get', class: 'pure-form pure-g') do %>
+        <%= form_tag(courses_path, method: 'get', class: 'pure-form') do %>
         <div id="icon-links">
             <div class="icon-link">
                 <%= link_to :courses do %>
@@ -39,11 +39,13 @@
                 <% end %>
             </div>
         </div>
-        <div class="pure-u-md-3-4 pure-u-1">
-            <%= text_field_tag 'search', nil, placeholder: 'Search for a course', class: 'pure-input pure-input-1' %>
-        </div>
-        <div class="pure-u-md-1-4 pure-u-1">
-            <%= submit_tag 'Search', id: 'search-button', class:'pure-button pure-button-primary' %>
+        <div class="pure-g">
+            <div class="pure-u-md-3-4 pure-u-1">
+                <%= text_field_tag 'search', nil, placeholder: 'Search for a course', class: 'pure-input pure-input-1' %>
+            </div>
+            <div class="pure-u-md-1-4 pure-u-1">
+                <%= submit_tag 'Search', id: 'search-button', class:'pure-button pure-button-primary' %>
+            </div>
         </div>
         <% end %>
     </div>
