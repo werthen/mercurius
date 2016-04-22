@@ -1,12 +1,21 @@
-<h1><%= @course.name %></h1>
-
+<h1 class="center">
+    <%= @course.name %>
+    <% if @course.lecturer %>
+        <small class="lecturer-subtitle">
+            door
+        <%= link_to @course.lecturer.name, @course.lecturer %>
+        </small>
+    <% end %>
+</h1>
+<p>
+    Semester
+    <%= @course.semester %>
+</p>
 <%= link_to 'ECTS Fiche', @course.ects_url %>
-
 <ul>
     <% @course.programmes.each do |programme| %>
-    <li><%= link_to programme.name, programme %>
-        <%= link_to "Op studiegids", programme.url %></li>
+        <li><%= link_to programme.name, programme %>
+            <%= link_to "Op studiegids", programme.url %></li>
     <% end %>
 </ul>
-
 <%= link_to "Back", :back %>
