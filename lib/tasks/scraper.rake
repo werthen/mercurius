@@ -24,7 +24,7 @@ namespace :scraper do
         end
       end
 
-      list << pagina unless pagina.iframe
+      list << pagina
     end
 
     # Setup

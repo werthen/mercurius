@@ -4,49 +4,49 @@
     </div>
     <div class="blank"></div>
     <div class="main">
-        <%= form_tag(courses_path, method: 'get', class: 'pure-form') do %>
-        <div id="icon-links">
-            <div class="icon-link">
-                <%= link_to :courses do %>
-                <%= fa_icon('book 4x', class: 'fa-fw') %>
-                <p class="link-description">
-                    Courses
+        <%= form_tag courses_path, method: 'get', class: 'pure-form' do %>
+            <div id="icon-links">
+                <div class="icon-link">
+                    <%= link_to :courses do %>
+                        <%= fa_icon('book 4x', class: 'fa-fw') %>
+                        <p class="link-description">
+                            Courses
                 </p>
-                <% end %>
-            </div>
-            <div class="icon-link">
-                <%= link_to :lecturers do %>
-                <%= fa_icon('graduation-cap 4x', class: 'fa-fw') %>
-                <p class="link-description">
-                    Lecturers
+                    <% end %>
+                </div>
+                <div class="icon-link">
+                    <%= link_to :lecturers do %>
+                        <%= fa_icon('graduation-cap 4x', class: 'fa-fw') %>
+                        <p class="link-description">
+                            Lecturers
                 </p>
-                <% end %>
-            </div>
-            <div class="icon-link">
-                <%= link_to :programmes do %>
-                <%= fa_icon('pencil 4x', class: 'fa-fw') %>
-                <p class="link-description">
-                    Programmes
+                    <% end %>
+                </div>
+                <div class="icon-link">
+                    <%= link_to :programmes do %>
+                        <%= fa_icon('pencil 4x', class: 'fa-fw') %>
+                        <p class="link-description">
+                            Programmes
                 </p>
-                <% end %>
-            </div>
-            <div class="icon-link">
-                <%= link_to :faculties do %>
-                <%= fa_icon('university 4x', class: 'fa-fw') %>
-                <p class="link-description">
-                    Faculties
+                    <% end %>
+                </div>
+                <div class="icon-link">
+                    <%= link_to :faculties do %>
+                        <%= fa_icon('university 4x', class: 'fa-fw') %>
+                        <p class="link-description">
+                            Faculties
                 </p>
-                <% end %>
+                    <% end %>
+                </div>
             </div>
-        </div>
-        <div class="pure-g">
-            <div class="pure-u-md-3-4 pure-u-1">
-                <%= text_field_tag 'search', nil, placeholder: 'Search for a course', class: 'pure-input pure-input-1' %>
+            <div class="pure-g">
+                <div class="remote pure-u-md-3-4 pure-u-1">
+                    <%= text_field_tag 'search', nil, placeholder: 'Search for a course', class: 'pure-input pure-input-1' %>
+                </div>
+                <div class="pure-u-md-1-4 pure-u-1">
+                    <%= submit_tag 'Search', id: 'search-button', class:'pure-button pure-button-primary' %>
+                </div>
             </div>
-            <div class="pure-u-md-1-4 pure-u-1">
-                <%= submit_tag 'Search', id: 'search-button', class:'pure-button pure-button-primary' %>
-            </div>
-        </div>
         <% end %>
     </div>
     <footer>
