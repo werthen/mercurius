@@ -1,8 +1,8 @@
 /* Place all the styles related to the Welcome controller here.*/
 /* They will automatically be included in application.css.*/
 /* You can use Sass (SCSS) here: http://sass-lang.com/*/
-$ugent_blue: #0f61de;
-$ugent_yellow: #ffbf0f;
+@import "colors";
+
 body,
 html {
     width: 100%;
@@ -135,11 +135,19 @@ footer {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+.twitter-typeahead {
+    resize: none;
+}
 #icon-links {
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
     .icon-link {
+        /* width: 200px; */
         flex-grow: 1;
         margin-left: 20px;
         margin-right: 20px;
@@ -149,6 +157,4 @@ footer {
             font-weight: bold;
         }
     }
-    position: relative;
-    width: 100%;
 }
