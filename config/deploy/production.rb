@@ -1,6 +1,7 @@
-server 'mercurius.werthen.me', user: 'mercurius', roles: %w{web app db}, ssh_options: {
+server 'mercurius.werthen.me', user: 'mercurius', roles: %w(web app db), ssh_options: {
+  port: 15259,
   forward_agent: true,
-  auth_methods: ['publickey']
+  auth_methods: %w(publickey)
 }
 
 set :rails_env, 'production'
@@ -15,8 +16,6 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-
-
 # role-based syntax
 # ==================
 
@@ -29,8 +28,6 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
-
 # Configuration
 # =============
 # You can set any configuration variable like in config/deploy.rb
@@ -38,8 +35,6 @@ set :rbenv_ruby, File.read('.ruby-version').strip
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
