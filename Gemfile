@@ -22,19 +22,27 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Needed for scraper
 gem 'mechanize'
 
 gem 'pure-css-rails'
 
+# Advanced searching
 gem 'textacular'
 
+# Code coverage
 gem 'coveralls', require: false
+# Cron jobs
 gem 'whenever', require: false
 gem 'font-awesome-rails'
 
+# Email validator
 gem 'valid_url'
+
+# Pagination
 gem 'will_paginate'
 
+# typeahead javascript plugin
 gem 'twitter-typeahead-rails'
 
 # Use ActiveModel has_secure_password
@@ -43,19 +51,17 @@ gem 'twitter-typeahead-rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Access an IRB console on exception pages or by using <%= console %> in views
+gem 'web-console', '~> 2.0', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  # Use Capistrano for deployment
   gem 'capistrano'
   gem 'capistrano-rvm'
   gem 'capistrano-rails'
