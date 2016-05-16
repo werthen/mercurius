@@ -168,3 +168,17 @@ footer {
         }
     }
 }
+.tt-menu.tt-open {
+    background-color: white;
+    border-left: 3px solid $ugent_blue;
+    border-right: 3px solid $ugent_blue;
+    border-bottom: 3px solid $ugent_blue;
+    width: calc(100% - 6px);
+}
+#locales {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    color: white;
+    font-size: 11px;
+}

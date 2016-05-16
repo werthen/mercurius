@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  scope '(:locale)', locale: /en|nl/ do
+    resources :courses, only: [:index, :show]
+    resources :lecturers, only: [:index, :show]
+    resources :faculties, only: [:index, :show]
+    resources :programmes, only: [:index, :show]
 
-  resources :courses, only: [:index, :show]
-  resources :lecturers, only: [:index, :show]
-  resources :faculties, only: [:index, :show]
-  resources :programmes, only: [:index, :show]
-
+  end
+  get '/:locale' => 'welcome#index'
   root 'welcome#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

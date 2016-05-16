@@ -1,0 +1,9 @@
+nl:
+  search_placeholder: "Zoek naar een vak"
+  search: "Zoeken"
+  courses: "Cursussen"
+  lecturers: "Lesgevers"
+  programmes: "Opleidingen"
+  faculties: "Faculteiten"
+
+  lot_of_love: "Gemaakt met veel %{love} door een %{thing}."
