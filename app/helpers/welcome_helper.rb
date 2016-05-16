@@ -8,6 +8,10 @@ module WelcomeHelper
   end
 
   def locales
-    sanitize I18n.available_locales.map { |l| link_to l, url_for(locale: l) }.join(' | ')
+    a_l = I18n.available_locales.map do |l|
+      # no_turbolink to make I18n.js work
+      link_to l, url_for(locale: l), data: { no_turbolink: true }
+    end
+    sanitize(a_l.join(' | '), attributes: %w(href data-no-turbolink))
   end
 end

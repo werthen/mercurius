@@ -1,5 +1,6 @@
 nl:
-  search_placeholder: "Zoek naar een vak"
+  search_placeholder: "Zoek naar %{items}"
+  search_default: "Zoek..."
   search: "Zoeken"
   courses: "Cursussen"
   lecturers: "Lesgevers"

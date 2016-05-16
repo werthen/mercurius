@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require twitter/typeahead.min
+//= require i18n/translations
+//= require jquery-readyselector
 //= require_tree .

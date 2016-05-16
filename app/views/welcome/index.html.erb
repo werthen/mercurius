@@ -1,57 +1,25 @@
 <div class="one-page">
-    <header id="locales">
-        <%= locales %>
-    </header>
-    <div class="banner">
+    <header class="banner">
+        <div id="locales">
+            <%= locales %>
+        </div>
         <div class="title">Mercurius ☿</div>
-    </div>
+    </header>
     <div class="blank"></div>
-    <div class="main">
-        <%= form_tag courses_path, method: 'get', class: 'pure-form' do %>
-            <div id="icon-links">
-                <div class="icon-link">
-                    <%= link_to :courses do %>
-                        <%= fa_icon('book 4x', class: 'fa-fw') %>
-                        <p class="link-description">
-                            <%= t('courses') %>
-                        </p>
-                    <% end %>
-                </div>
-                <div class="icon-link">
-                    <%= link_to :lecturers do %>
-                        <%= fa_icon('graduation-cap 4x', class: 'fa-fw') %>
-                        <p class="link-description">
-                            <%= t('lecturers') %>
-                        </p>
-                    <% end %>
-                </div>
-                <div class="icon-link">
-                    <%= link_to :programmes do %>
-                        <%= fa_icon('pencil 4x', class: 'fa-fw') %>
-                        <p class="link-description">
-                            <%= t('programmes') %>
-                        </p>
-                    <% end %>
-                </div>
-                <div class="icon-link">
-                    <%= link_to :faculties do %>
-                        <%= fa_icon('university 4x', class: 'fa-fw') %>
-                        <p class="link-description">
-                            <%= t('faculties') %>
-                        </p>
-                    <% end %>
-                </div>
-            </div>
+    <main class="main">
+        <!-- <%= render 'icon_links' %> -->
+        <%= render 'icon_select' %>
+        <%= form_tag courses_path, method: 'get', id: 'search-form', class: 'pure-form' do %>
             <div class="pure-g" id="searchbar">
                 <div class="remote pure-u-md-3-4 pure-u-1">
-                    <%= text_field_tag 'search', nil, placeholder: t('search_placeholder'), class: 'pure-input pure-input-1' %>
+                    <%= text_field_tag 'search', nil, placeholder: t('search_default'), class: 'pure-input pure-input-1' %>
                 </div>
                 <div class="pure-u-md-1-4 pure-u-1">
                     <%= submit_tag t('search'), id: 'search-button', class:'pure-button pure-button-primary' %>
                 </div>
             </div>
         <% end %>
-    </div>
+    </main>
     <footer>
         <%= link_to t('lot_of_love', love: love, thing: thing), 'http://werthen.me' %>
     </footer>

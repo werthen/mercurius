@@ -1,0 +1,34 @@
+<div id="icon-links">
+    <div class="icon-link">
+        <%= link_to :courses do %>
+            <%= fa_icon('book 4x', class: 'fa-fw') %>
+            <p class="link-description">
+                <%= t('courses') %>
+            </p>
+        <% end %>
+    </div>
+    <div class="icon-link">
+        <%= link_to :lecturers do %>
+            <%= fa_icon('graduation-cap 4x', class: 'fa-fw') %>
+            <p class="link-description">
+                <%= t('lecturers') %>
+            </p>
+        <% end %>
+    </div>
+    <div class="icon-link">
+        <%= link_to :programmes do %>
+            <%= fa_icon('pencil 4x', class: 'fa-fw') %>
+            <p class="link-description">
+                <%= t('programmes') %>
+            </p>
+        <% end %>
+    </div>
+    <div class="icon-link">
+        <%= link_to :faculties do %>
+            <%= fa_icon('university 4x', class: 'fa-fw') %>
+            <p class="link-description">
+                <%= t('faculties') %>
+            </p>
+        <% end %>
+    </div>
+</div>

@@ -45,6 +45,9 @@ gem 'will_paginate'
 # typeahead javascript plugin
 gem 'twitter-typeahead-rails'
 
+# i18n in javascript
+gem 'i18n-js', '>= 3.0.0.rc11'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

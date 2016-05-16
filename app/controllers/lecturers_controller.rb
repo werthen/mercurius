@@ -1,6 +1,12 @@
 class LecturersController < ApplicationController
   def index
-    @lecturers = Lecturer.all.order(name: :asc)
+    @lecturers = if params[:search]
+                   Lecturer.fuzzy_search(name: params[:search])
+                 else
+                   Lecturer.all
+                 end
+
+    @lecturers = @lecturers.order(name: :asc)
   end
 
   def show

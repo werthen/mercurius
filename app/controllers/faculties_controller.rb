@@ -1,5 +1,6 @@
 class FacultiesController < ApplicationController
   def index
+
   end
 
   def show
