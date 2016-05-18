@@ -11,10 +11,10 @@
         <%= render 'icon_select' %>
         <%= form_tag courses_path, method: 'get', id: 'search-form', class: 'pure-form' do %>
             <div class="pure-g" id="searchbar">
-                <div class="remote pure-u-md-3-4 pure-u-1">
+                <div class="remote pure-u-3-4">
                     <%= text_field_tag 'search', nil, placeholder: t('search_default'), class: 'pure-input pure-input-1' %>
                 </div>
-                <div class="pure-u-md-1-4 pure-u-1">
+                <div class="pure-u-1-4">
                     <%= submit_tag t('search'), id: 'search-button', class:'pure-button pure-button-primary' %>
                 </div>
             </div>

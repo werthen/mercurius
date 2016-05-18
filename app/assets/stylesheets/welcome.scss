@@ -34,7 +34,6 @@ textarea {
     -ms-flex-align: center;
     width: 100%;
     height: 100%;
-    resize: both;
 
     -webkit-justify-content: center;
     -webkit-box-pack: center;
@@ -96,6 +95,11 @@ textarea {
     font-size: 75px;
     line-height: 100px;
 }
+@media (max-width: 768px) {
+    .title {
+        font-size: 50px;
+    }
+}
 .main {
     top: -50px;
     width: 90%;
@@ -114,6 +118,7 @@ textarea {
         font-weight: 100;
         font-size: 40px;
         resize: none;
+        margin-bottom: 0px;
     }
     #search-button {
         border-radius: 0;
