@@ -21,67 +21,28 @@ textarea {
     font-family: 'Raleway', sans-serif;
 }
 .one-page {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
-    -ms-flex-align: center;
     width: 100%;
     height: 100%;
 
-    -webkit-justify-content: center;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
 }
 .banner {
     display: flex;
-    -webkit-flex-direction: column;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: row;
-    /* IE6-9 fallback on horizontal gradient */
     flex-direction: column;
-    -ms-flex-pack: center;
-    -ms-flex-align: center;
     margin: 0;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 0;
     width: 100%;
     height: 25%;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f61de+32,ffbf0f+65 */
     background: $ugent_blue;
-    /* Old browsers */
-    background: -moz-linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
-    /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(45deg, $ugent_blue 32%, $ugent_yellow 65%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '$ugent_blue', endColorstr='$ugent_yellow',GradientType=1 );
     resize: both;
 
-    -webkit-justify-content: center;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-grid-row-align: center;
     align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
 }
 .blank {
     height: 10%;
@@ -111,6 +72,7 @@ textarea {
         height: 100px;
     }
     #search {
+        margin-bottom: 0px;
         border: 3px;
         border-style: solid;
         border-color: $ugent_blue;
@@ -118,7 +80,6 @@ textarea {
         font-weight: 100;
         font-size: 40px;
         resize: none;
-        margin-bottom: 0px;
     }
     #search-button {
         border-radius: 0;
@@ -134,8 +95,6 @@ footer {
     font-weight: 100;
 }
 .pure-g > div {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .twitter-typeahead {
@@ -187,9 +146,9 @@ footer {
     font-size: 11px;
 }
 #icon-selection {
-    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
     width: 100%;
 
     flex-wrap: wrap;
@@ -200,47 +159,42 @@ footer {
         margin-right: 20px;
         margin-left: 20px;
         padding: 19px;
-        flex-grow: 'grow';
-
         border: 4px solid;
-
         border-color: rgba(0, 0, 0, 0);
         transition: border-color 0.5s;
+
+        flex-grow: 'grow';
     }
     .icon-select:hover {
         background-color: rgb(230, 230, 230);
     }
     .icon-select::before {
         opacity: 0;
-
         transition: all 0.5s;
     }
 
     .selected {
-        border-color: $ugent_blue;
         padding: 19px;
+        border-color: $ugent_blue;
         background-color: white;
-
         transition: border-color 0.5s;
     }
     .icon-select.selected::before {
-        content: '';
         position: absolute;
         right: 0;
         bottom: 0;
         border-width: 0 0 27px 27px;
         border-style: solid;
         border-color: transparent transparent $ugent_blue transparent;
-
+        content: '';
         opacity: 0;
-
         transition: all 0.5s;
     }
     .selected::before::before {
-        content: "\2713";
-        color: white;
         position: absolute;
-        right: 4px;
         top: 14px;
+        right: 4px;
+        color: white;
+        content: "\2713";
     }
 }

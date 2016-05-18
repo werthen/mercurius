@@ -25,7 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Needed for scraper
 gem 'mechanize'
 
+# CSS framework
 gem 'pure-css-rails'
+gem 'font-awesome-rails'
+
+# CSS autoprefixing
+gem 'autoprefixer-rails'
 
 # Advanced searching
 gem 'textacular'
@@ -34,7 +39,6 @@ gem 'textacular'
 gem 'coveralls', require: false
 # Cron jobs
 gem 'whenever', require: false
-gem 'font-awesome-rails'
 
 # Email validator
 gem 'valid_url'
