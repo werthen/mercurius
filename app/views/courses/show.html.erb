@@ -2,16 +2,16 @@
     <%= @course.name %>
     <% if @course.lecturer %>
         <small class="lecturer-subtitle">
-            door
-        <%= link_to @course.lecturer.name, @course.lecturer %>
+            <%= t(:by) %>
+            <%= link_to @course.lecturer.name, @course.lecturer %>
         </small>
     <% end %>
 </h1>
 <p>
-    Semester
+    <%= t(:semester) %>
     <%= @course.semester %>
 </p>
-<%= link_to 'ECTS Fiche', @course.ects_url %>
+<%= link_to 'PDF', @course.ects_url %>
 <ul>
     <% @course.programmes.each do |programme| %>
         <li><%= link_to programme.name, programme %>
