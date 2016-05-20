@@ -6,3 +6,8 @@ Improved programme catalogue of Ghent University
 ## Installation
 
 1. Install postgres
+2. Create mercurius role in postgres with CREATEDB permissions as follows: `CREATE ROLE mercurius WITH SUPERUSER bCREATEDB LOGIN PASSWORD '';`
+3. Execute `bundle install` in the project folder
+4. Execute `rake db:setup`
+5. Execute `rake scraper:scrape` to initiate the data gathering
+6. `rails s` and you're off!
