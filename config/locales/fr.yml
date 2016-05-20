@@ -1,0 +1,15 @@
+fr:
+  search_placeholder: "Recherche de %{items}"
+  search_default: "Cherchez..."
+  search: "chercher"
+  courses: "Cours"
+  lecturers: "Professeurs"
+  programmes: "Orientations"
+  faculties: "Facultés"
+
+  lot_of_love: "Fait avec plein d' %{love} par un %{thing}."
+
+  by: "par"
+  semester: "Semestre"
+
+  page: "Page"
