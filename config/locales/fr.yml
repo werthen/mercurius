@@ -1,5 +1,10 @@
 fr:
-  search_placeholder: "Recherche de %{items}"
+  search_field:
+    placeholder: "Recherche %{items}"
+    courses: "De Cours"
+    lecturers: "De Professeurs"
+    programmes: "D'Orientations"
+    faculties: "De Facultés"
   search_default: "Cherchez..."
   search: "chercher"
   courses: "Cours"
