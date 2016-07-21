@@ -1,4 +1,4 @@
-server 'mercurius.werthen.me', user: 'mercurius', roles: %w(web app db), ssh_options: {
+server 'mercurius.werthen.com', user: 'mercurius', roles: %w(web app db), ssh_options: {
   port: 15259,
   forward_agent: true,
   auth_methods: %w(publickey)

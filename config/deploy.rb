@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:werthen/mercurius.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-role :web, 'mercurius.werthen.me'
+role :web, 'mercurius.werthen.com'
 set :deploy_to, '/var/www/mercurius'
 
 # Default value for :scm is :git
