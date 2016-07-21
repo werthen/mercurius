@@ -20,7 +20,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  search_placeholder: "Search for %{items}"
+  search_field:
+    placeholder: "Search for %{items}"
+    courses: "Courses"
+    lecturers: "Lecturers"
+    programmes: "Programmes"
+    faculties: "Faculties"
   search_default: "Search..."
   search: "Search"
   courses: "Courses"

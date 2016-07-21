@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope '(:locale)', locale: /en|nl/ do
+  scope '(:locale)', locale: /en|nl|fr/ do
     resources :courses, only: [:index, :show]
     resources :lecturers, only: [:index, :show]
     resources :faculties, only: [:index, :show]

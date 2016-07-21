@@ -17,9 +17,8 @@ $(document).on 'ready page:load', ->
 
     # Set searchbar placeholder, typeahead and button
     set_search_bar = (name) ->
-      $('#search').attr 'placeholder', I18n.t 'search_placeholder',
-        items: I18n.t(name).toLowerCase()
-
+      $('#search').attr 'placeholder', I18n.t 'search_field.placeholder',
+        items: I18n.t("search_field.#{name}").toLowerCase()
       # Add typeahead to the search bar
       $('#search').typeahead null,
         name: name,
